@@ -201,6 +201,11 @@ augroup pythongroup
     autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 augroup END
 
+augroup haskellgroup
+    " https://wiki.haskell.org/Vim
+    autocmd FileType haskell setlocal tabstop=8 expandtab softtabstop=4 shiftwidth=4 shiftround                  
+augroup END
+
 augroup rubygroup
     autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 augroup END
