@@ -57,8 +57,8 @@ set directory=~/.vim/swap/
 set writebackup
 
 " Set listchars for editing
-" set list
-" set listchars=tab:▸\ ,eol:¬,trail:·
+set list
+set listchars=tab:▸\ ,eol:¬,trail:·
 
 " Commandline/statusline completetion
 set ruler
@@ -67,12 +67,12 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Indentation
-" set smarttab
+set smarttab
 set autoindent
 
 " Make scrolling practical
-set scrolloff=3
-set sidescrolloff=3
+set scrolloff=4
+set sidescrolloff=4
 
 " Searching options
 set smartcase
@@ -203,7 +203,7 @@ augroup END
 
 augroup haskellgroup
     " https://wiki.haskell.org/Vim
-    autocmd FileType haskell setlocal tabstop=8 expandtab softtabstop=4 shiftwidth=4 shiftround                  
+    autocmd FileType haskell setlocal tabstop=8 expandtab softtabstop=4 shiftwidth=4 shiftround
 augroup END
 
 augroup rubygroup
