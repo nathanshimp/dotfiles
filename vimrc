@@ -48,7 +48,6 @@ scriptencoding utf-8
 
 " Make long text readable
 set nowrap
-set linebreak
 
 " Backups and swaps
 set backup
@@ -195,6 +194,9 @@ nnoremap <leader>lc :!detex % \| wc -w<cr>
 
 " GNU Indent
 nnoremap <silent> <leader>i :!indent %<cr><cr>
+
+" Terminal
+tnoremap <esc> <C-\><C-n>
 
 augroup pythongroup
     autocmd FileType python syntax keyword pythonBuiltin self
