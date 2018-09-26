@@ -89,6 +89,8 @@ set t_ut= " disable background color erase reference: https://sunaku.github.io/v
 set termguicolors
 set background=dark
 colorscheme solarized8
+" Proper terminal colors
+" hi Terminal ctermbg=lightgrey ctermfg=blue guibg=lightgrey guifg=blue
 
 " So conceal characters look nice!
 highlight clear Conceal
@@ -124,16 +126,27 @@ let mapleader = ','
 nnoremap <cr> za
 
 " Make
-nnoremap <leader>c :make!<cr>
+" nnoremap <leader>c :make!<cr>
+" never used
+
+" Terminal
+nnoremap <leader>t :terminal<cr>
+inoremap <leader>t <esc>:terminal<cr>
+vnoremap <leader>t <esc>:terminal<cr>
+nnoremap <leader>vt :vertical terminal<cr>
+inoremap <leader>vt <esc>:vertical terminal<cr>
+vnoremap <leader>vt <esc>:vertical terminal<cr>
 
 " Easy buffer explorer
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <silent> <leader>x :bdelete<cr>
 
 " Easy Ctags
-nnoremap <leader>gt :!ctags -R<cr>
-nnoremap <leader>t :CtrlPTag<cr>
-nnoremap <leader>th :TagbarToggle<cr>
+" nnoremap <leader>gt :!ctags -R<cr>
+" nnoremap <leader>c :CtrlPTag<cr>
+" nnoremap <leader>th :TagbarToggle<cr>
+"
+nnoremap <leader>cg :cscope find g<space>
 
 " NERDTree view
 nnoremap <leader>n :NERDTreeToggle<cr>
@@ -145,16 +158,6 @@ nnoremap <leader>j <C-]>
 nnoremap <leader>w :w<cr>
 inoremap <leader>w <esc>:w<cr><esc>
 vnoremap <leader>w <esc>:w<cr><esc>
-
-" Split navigation
-inoremap <A-h> <C-\><C-N><C-w>h
-inoremap <A-j> <C-\><C-N><C-w>j
-inoremap <A-k> <C-\><C-N><C-w>k
-inoremap <A-l> <C-\><C-N><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
 
 " Quick quit
 noremap <leader>q <esc>:q<cr>
@@ -178,9 +181,6 @@ nnoremap <C-t> :tabnew<cr>
 " Quick open vimrc
 nnoremap <leader>vc :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" Quick open zshrc
-nnoremap <leader>z :e $HOME/.zshrc<cr>
 
 " Quick Markdown Preview
 nnoremap <leader>mp :%!markdown<cr>
