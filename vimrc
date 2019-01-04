@@ -75,7 +75,7 @@ set sidescrolloff=4
 
 " Searching options
 set smartcase
-set hlsearch
+" set hlsearch
 set incsearch
 
 " Allow backspacing over autoindent, line breaks and start of insert action
@@ -121,9 +121,6 @@ let g:cpp_experimental_template_highlight = 1
 let mapleader = ','
 
 """ Maps
-
-" Folds
-nnoremap <cr> za
 
 " Make
 " nnoremap <leader>c :make!<cr>
@@ -203,6 +200,10 @@ augroup pythongroup
     autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 augroup END
 
+augroup javagroup
+    autocmd FileType java setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+augroup END
+
 augroup haskellgroup
     " https://wiki.haskell.org/Vim
     autocmd FileType haskell setlocal tabstop=8 expandtab softtabstop=4 shiftwidth=4 shiftround
@@ -214,15 +215,6 @@ augroup END
 
 augroup rubygroup
     autocmd FileType haskell setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-augroup END
-
-augroup yamlgroup
-    autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-augroup END
-
-augroup htmlgroup
-    autocmd BufNewFile,BufReadPost *.html set filetype=htmldjango
-    autocmd FileType htmldjango setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 augroup END
 
 augroup latexgroup
